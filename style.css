@@ -1,0 +1,136 @@
+:root {
+  --clr-p-purple: hsl(259, 100%, 65%);
+  --clr-light-red: hsl(0, 100%, 67%);
+
+  --clr-n-white: hsl(0, 0%, 100%);
+  --clr-n-off-white: hsl(0, 0%, 94%);
+  --clr-n-light-grey: hsl(0, 0%, 86%);
+  --clr-n-smokey-grey: hsl(0, 1%, 44%);
+  --clr-n-off-black: hsl(0, 0%, 8%);
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-n-light-grey);
+}
+img {
+  max-width: 100%;
+}
+.container {
+  border-radius: 10px 10px 100px 10px;
+  background-color: var(--clr-n-white);
+  padding: 1rem;
+  margin-top: 100px;
+  width: 350px;
+  font-size: 32px;
+}
+.form {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  position: relative;
+}
+.form-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 4rem;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 0.5rem;
+  width: 100px;
+  font-weight: 700;
+  border: 1px solid var(--clr-n-light-grey);
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+input::placeholder {
+  color: black;
+  font-family: inherit;
+}
+label {
+  text-transform: uppercase;
+  font-size: 0.5em;
+  color: var(--clr-n-smokey-grey);
+  letter-spacing: 2px;
+  margin-bottom: 0.15rem;
+}
+.result-container {
+  font-size: 1.8em;
+  font-weight: 800;
+  font-style: italic;
+  border-top: 2px solid var(--clr-n-light-grey);
+  padding-block: 4rem 2rem;
+  line-height: 1.1;
+}
+small {
+  font-size: 0.4rem;
+  font-weight: 400i;
+  margin-top: 0.2rem;
+  visibility: hidden;
+}
+button {
+  border: none;
+  background-color: var(--clr-p-purple);
+  padding: 1.2rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 41%;
+  top: 80%;
+  width: 65px;
+  height: 65px;
+}
+.error small {
+  visibility: visible;
+}
+.error input {
+  border-color: var(--clr-light-red);
+}
+.error small,
+.error label {
+  color: var(--clr-light-red);
+}
+.success small {
+  visibility: hidden;
+}
+.success input {
+  border-color: green;
+}
+span {
+  color: var(--clr-p-purple);
+}
+@media (min-width: 568px) {
+  .container {
+    width: 600px;
+    border-radius: 10px 10px 150px 10px;
+    padding: 2.5rem;
+  }
+  input {
+    width: 130px;
+  }
+  button {
+    left: 88.4%;
+    top: 75%;
+  }
+  .form-container {
+    gap: 1.5rem;
+  }
+  .form {
+    padding-bottom: 2.5rem;
+  }
+  .result-container {
+    font-size: 2.5em;
+    padding-block: 2rem 0;
+  }
+}
